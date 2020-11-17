@@ -17,11 +17,11 @@
 remote_theme: "mmistakes/so-simple-theme@3.2.0"
 skin: "/assets/css/skins/default.css"
 locale: ko-KR
-title: "Data lover, Game player"
-description: "My personal devlog"
+title: "Data Lover, Game Player"
+description: ""
 baseurl: "" # the subpath of your site, e.g. "/blog"
 url: "https://euneestella.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: # path of site logo, e.g. "/images/logo.png"
+logo: # "/images/logo.PNG"
 date_format: "%B %-d, %Y"
 read_time: true # reading time estimates, e.g. true
 words_per_minute: # 200
