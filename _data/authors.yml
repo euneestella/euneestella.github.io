@@ -2,13 +2,13 @@
 # Remove file or replace with your own
 
 Billy Rick:
-  name: Billy Rick
+  name: Eunhee Kim
   picture: /images/bio-photo-2.jpg
-  twitter: "@billyrick"
+  twitter: 
   links:
-    - title: Twitter
-      url: https://twitter.com/billyrick
-      icon: fab fa-twitter-square
+    - title: 
+      url: 
+      icon: 
 
 Cornelius Fiddlebone:
   name: Cornelius Fiddlebone
