@@ -87,7 +87,9 @@ defaults:
       type: posts
     values:
       layout: post
+      comments: true
       share: true
+      sitemap: true
 
 # Site Author
 author:
