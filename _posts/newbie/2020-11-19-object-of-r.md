@@ -4,6 +4,7 @@ categories: newbie
 title:  "뉴비를 위한 R 객체(object)의 이해"
 excerpt: "프로그래밍 언어가 생소한 당신을 위한 뉴비 가이드"
 tags: [R, newbie]
+use_math : true
 date: 2020-11-19
 last_modified_at: 2020-11-19
 ---
