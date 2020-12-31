@@ -4,15 +4,9 @@ categories: newbie
 title:  "뉴비를 위한 R 객체(object)의 이해"
 excerpt: "프로그래밍 언어가 생소한 당신을 위한 뉴비 가이드"
 tags: [R, newbie]
-use_math : true
 date: 2020-11-19
 last_modified_at: 2020-11-19
 ---
-
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
-
 
 이 글은 서울대학교 아시아연구소 [한국사회과학자료원(KOSSDA)](https://kossda.snu.ac.kr/) 방법론 교육 프로그램의 실습 강의를 위해 작성한 강의안을 일부 변형하였음을 알립니다.
 
@@ -161,7 +155,7 @@ R에서는 `t()` 명령어로 행렬의 전치가 가능하며, 행렬의 다양
 
 - 행렬의 성분별 곱연산 : `*`
 
-  $mt1\quad =\quad \begin{bmatrix} 1 & 1 \\ 0 & 2 \\ 1 & 3 \\ 1 & 4 \end{bmatrix}$의 각 성분별 연산이 가능할까? R에서는 `*` 연산자로 성분별 곱을 계산할 수 있다.
+  $$mt1\quad =\quad \begin{bmatrix} 1 & 1 \\ 0 & 2 \\ 1 & 3 \\ 1 & 4 \end{bmatrix}$$의 각 성분별 연산이 가능할까? R에서는 `*` 연산자로 성분별 곱을 계산할 수 있다.
 
   ```r
   > mt1*mt1
