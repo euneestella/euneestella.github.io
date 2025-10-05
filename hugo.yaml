@@ -1,0 +1,29 @@
+baseURL: https://example.org/
+languageCode: ko-kr
+title: Knit-the-code
+theme: ["PaperMod"]
+
+menu:
+  main:
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+#    - identifier: example
+#      name: example.org
+#      url: https://example.org
+#      weight: 30
+
+params:
+  homeInfoParams:
+    Title: 👩🏻‍💻 AI Research Engineer 김은희입니다
+
+  socialIcons: # optional
+    - name: "<platform>"
+      url: "<link>"
+    - name: "<platform 2>"
+      url: "<link2>"
