@@ -21,6 +21,10 @@ menu:
 params:
   homeInfoParams:
     Title: 👩🏻‍💻 AI Research Engineer 김은희입니다
+    Content: |
+      생성 모델을 기반으로 몰입감 있는 3D Human Motion을 생성합니다.
+      
+      엔터테인먼트의 부가가치를 더할 수 있는 AI 기술을 연구하고 개발하고자 노력합니다.
 
   socialIcons:
     - name: "LinkedIn"
