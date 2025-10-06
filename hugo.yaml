@@ -22,8 +22,10 @@ params:
   homeInfoParams:
     Title: 👩🏻‍💻 AI Research Engineer 김은희입니다
 
-  socialIcons: # optional
-    - name: "<platform>"
-      url: "<link>"
-    - name: "<platform 2>"
-      url: "<link2>"
+  socialIcons:
+    - name: "LinkedIn"
+      url: "https://www.linkedin.com/in/eun-hee-kim/"
+    - name: "GitHub"
+      url: "https://github.com/euneestella"
+    - name: "Instagram"
+      url: "https://www.instagram.com/theknitterkim/"
