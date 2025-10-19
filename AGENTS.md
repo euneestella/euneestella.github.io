@@ -1,16 +1,32 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-This site uses Hugo with the PaperMod theme checked in under `themes/PaperMod` as a submodule. Global configuration lives in `hugo.yaml`. Content bundles belong in `content/…` (create if missing) and use the default front matter from `archetypes/default.md`. Layout overrides reside in `layouts/_defaults/`, where `list.html` customizes list views. Keep custom shortcodes or partials under `layouts/partials/` to avoid conflicts with the upstream theme. Assets placed in `static/` publish verbatim at the site root.
+- Hugo configuration lives in `hugo.yaml`; keep site-wide params aligned with theme expectations.
+- Author new content under `content/` using bundles; start from `archetypes/default.md` for front matter.
+- Layout overrides belong in `layouts/_defaults/`; custom partials or shortcodes sit in `layouts/partials/` to avoid PaperMod drift.
+- Assets you want published verbatim land in `static/`; the production output from `hugo` is written to `public/` and should stay untracked.
 
 ## Build, Test, and Development Commands
-Use `hugo serve -D --buildDrafts` for live previews with drafts and auto-reload. Run `hugo --cleanDestinationDir --minify` before deploying to ensure a reproducible production build in `public/`. When the theme submodule changes, execute `git submodule update --init --recursive` to sync PaperMod assets. Add new archetypes with `hugo new archetype <name>.md` to standardize future content types.
+- `hugo serve -D --buildDrafts` spins up a live preview with drafts, hot reload, and console warnings.
+- `hugo --cleanDestinationDir --minify` produces the deployable site in `public/`, clearing stale files and trimming assets.
+- `git submodule update --init --recursive` refreshes the PaperMod submodule when upstream changes are pulled.
+- `hugo new archetype <name>.md` seeds additional archetypes whenever you introduce a new content type.
 
 ## Coding Style & Naming Conventions
-Write Markdown content with tidy 80–100 character lines, fences for code, and descriptive alt text. Keep front matter keys in kebab-case (`showReadingTime`, `cover.hidden`). Titles and filenames should be lowercase with hyphens, e.g. `content/posts/model-evaluation.md`. Maintain two-space indentation inside templates and Go templates in overrides. Respect Hugo parameter naming used in `hugo.yaml` to avoid drift.
+- Keep Markdown lines between 80–100 characters, prefer fenced code blocks, and add descriptive alt text for images.
+- Use lowercase, hyphenated filenames (`content/posts/model-evaluation.md`) and kebab-case front matter keys (`showReadingTime`, `cover.hidden`).
+- Maintain two-space indentation in templates and Go template blocks; mirror parameter names already declared in `hugo.yaml`.
 
 ## Testing Guidelines
-Treat a clean `hugo` build as the baseline check; fix all warnings before committing. Verify new or updated pages locally via `hugo serve` and review the generated HTML in `public/`. For long-running sections, use `hugo --templateMetrics` to surface slow templates and adjust overrides as necessary.
+- Treat a clean `hugo --cleanDestinationDir --minify` run as the release gate; resolve every warning before committing.
+- Validate page updates locally with `hugo serve` and spot-check generated HTML in `public/` for layout or asset regressions.
+- Profile slow renders with `hugo --templateMetrics` when list or taxonomy pages lag.
 
 ## Commit & Pull Request Guidelines
-Follow the existing history by using short, imperative commit subjects (`Update Hugo version`, `Add deployment workflow`). Reference related issues in the body when applicable. Pull requests should summarize net changes, list affected sections or pages, and, for visual tweaks, attach before/after screenshots from the local preview. Confirm that the deploy action (`.github/workflows`) will run cleanly by including the production `hugo` command in your verification steps.
+- Write short, imperative commit subjects (e.g., `Add author profile shortcode`) and reference issues in the body where helpful.
+- Pull requests should summarize net changes, call out affected sections, and attach before/after screenshots for visual tweaks.
+- Confirm the deploy workflow succeeds by listing the production `hugo` command under your PR verification steps.
+
+## Security & Configuration Tips
+- Store secrets outside the repo; environment variables feed `hugo` via the shell when needed.
+- Pin Hugo version upgrades in the PR description and verify the PaperMod submodule remains compatible before merging.
